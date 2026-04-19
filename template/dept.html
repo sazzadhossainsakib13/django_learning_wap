@@ -1,0 +1,30 @@
+{% extends 'master/base.html' %}
+
+{% block title %}
+    Dept
+{% endblock title %}
+    
+{% block table %}
+   <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col">head</th>
+      <th scope="col">office num </th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% for dept in dept_data %}
+      <tr>
+      <td>{{dept.name}}</td>
+      <td>{{dept.head}}</td>
+      <td>{{dept.office_number}}</td>
+    </tr>
+    {% endfor %}
+      
+    
+    
+  </tbody>
+</table>  
+{% endblock table %}
